@@ -9,42 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de28940f-22bd-43ed-a6bc-f2892cada034" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/dataSources/0f272eb6-408b-41a9-b5c5-f24bafc6c8df.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/dataSources/0f272eb6-408b-41a9-b5c5-f24bafc6c8df/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/dataSources/46ff7b7f-06b1-4e3b-a324-c8c93f4b8f90.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/dataSources/46ff7b7f-06b1-4e3b-a324-c8c93f4b8f90/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/dataSources/4b10ed55-c64b-4339-9670-d5eb4f5f8623.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/dataSources/4b10ed55-c64b-4339-9670-d5eb4f5f8623/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Controllers/AdminController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Controllers/DownloadController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Data/AppDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Data/Entities/DownloadLogEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Data/Entities/FileEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/FileShare.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Models/FileModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Models/UploadViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Services/CleanupService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Services/FileService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Views/Admin/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Views/Admin/Upload.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileShare/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileShare/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/FileShare/Views/_ViewImports.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileShare/Views/_ViewStart.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/FileShare/Views/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FileShare/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileShare.sln" beforeDir="false" afterPath="$PROJECT_DIR$/FileShare.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileShare/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/FileShare/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileShare/Services/FileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FileShare/Services/FileService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileShare/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FileShare/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/local.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database/local.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,10 +29,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "nsignori-kersia"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/woofi7/FileShare.git",
+    "accountId": "58a79c1a-9a61-4c4b-a9a0-b6e4c4bb0036"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/FileShare/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FileShare/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 3
@@ -74,6 +61,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.FileShare: http.executor": "Run",
+    "Docker.docker-compose.yaml.fileshare: Compose Deployment.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -91,7 +79,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.FileShare: http">
+  <component name="RunManager" selected="Docker.docker-compose.yaml.fileshare: Compose Deployment">
     <configuration name="FileShare: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/FileShare/FileShare.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
@@ -160,6 +148,25 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yaml.fileshare: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="fileshare" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yaml.fileshare: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -168,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749512022199</updated>
-      <workItem from="1749512023585" duration="3228000" />
+      <workItem from="1749512023585" duration="3838000" />
     </task>
     <servers />
   </component>
@@ -210,10 +217,10 @@
           <line>127</line>
           <properties documentPath="E:\workspace\FileShare\FileShare\Services\FileService.cs" containingFunctionPresentation="Method 'IsAdminRequest'">
             <startOffsets>
-              <option value="4224" />
+              <option value="4220" />
             </startOffsets>
             <endOffsets>
-              <option value="4262" />
+              <option value="4258" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />

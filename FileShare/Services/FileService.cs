@@ -16,7 +16,7 @@ public class FileService
     {
         _context = context;
         _config = config;
-        _uploadPath = _config["FileShare:UploadPath"] ?? "/app/uploads";
+        _uploadPath = _config["FileShare:UploadPath"] ?? "/uploads";
         
         Directory.CreateDirectory(_uploadPath);
     }

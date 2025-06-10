@@ -1,7 +1,0 @@
-﻿services:
-  fileshare:
-    image: fileshare
-    build:
-      context: .
-      dockerfile: FileShare/Dockerfile
-
