@@ -48,28 +48,28 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
       
-    - name: Restart Portainer Stack
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-      run: |
-        # Get stack ID
-        STACK_ID=$(curl -s -H "X-API-Key: ${{ secrets.PORTAINER_API_TOKEN }}" \
-          "${{ secrets.PORTAINER_URL }}/api/stacks" | \
-          jq -r '.[] | select(.Name == "${{ secrets.PORTAINER_STACK_NAME }}") | .Id')
-        
-        if [ "$STACK_ID" != "null" ] && [ "$STACK_ID" != "" ]; then
-          echo "Found stack ID: $STACK_ID"
-        
-          # Redeploy the stack
-          curl -X POST \
-            -H "X-API-Key: ${{ secrets.PORTAINER_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            "${{ secrets.PORTAINER_URL }}/api/stacks/$STACK_ID/redeploy" \
-            -d '{
-              "pullImage": true,
-              "prune": false
-            }'
-        
-          echo "Stack redeploy triggered"
-        else
-          echo "Stack not found: ${{ secrets.PORTAINER_STACK_NAME }}"
-        fi
+      - name: Restart Portainer Stack
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        run: |
+          # Get stack ID
+          STACK_ID=$(curl -s -H "X-API-Key: ${{ secrets.PORTAINER_API_TOKEN }}" \
+            "${{ secrets.PORTAINER_URL }}/api/stacks" | \
+            jq -r '.[] | select(.Name == "${{ secrets.PORTAINER_STACK_NAME }}") | .Id')
+          
+          if [ "$STACK_ID" != "null" ] && [ "$STACK_ID" != "" ]; then
+            echo "Found stack ID: $STACK_ID"
+          
+            # Redeploy the stack
+            curl -X POST \
+              -H "X-API-Key: ${{ secrets.PORTAINER_API_TOKEN }}" \
+              -H "Content-Type: application/json" \
+              "${{ secrets.PORTAINER_URL }}/api/stacks/$STACK_ID/redeploy" \
+              -d '{
+                "pullImage": true,
+                "prune": false
+              }'
+          
+            echo "Stack redeploy triggered"
+          else
+            echo "Stack not found: ${{ secrets.PORTAINER_STACK_NAME }}"
+          fi
