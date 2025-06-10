@@ -1,8 +1,8 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
-USER $APP_UID
-WORKDIR /app
+USER root
 RUN mkdir -p /database /uploads && \
     chmod 755 /database /uploads
+WORKDIR /app
 EXPOSE 8080
 
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
