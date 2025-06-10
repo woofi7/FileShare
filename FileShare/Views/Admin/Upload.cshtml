@@ -1,0 +1,35 @@
+﻿@model FileShare.Models.UploadViewModel
+@{
+    ViewData["Title"] = "Upload File";
+}
+
+<h2>Upload File</h2>
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="mb-3">
+                <label asp-for="File" class="form-label">Select File</label>
+                <input asp-for="File" class="form-control" type="file" required>
+                <span asp-validation-for="File" class="text-danger"></span>
+            </div>
+            
+            <div class="mb-3">
+                <label asp-for="ExpirationHours" class="form-label">Expiration (hours)</label>
+                <input asp-for="ExpirationHours" class="form-control" type="number" min="1" max="168" value="1">
+                <span asp-validation-for="ExpirationHours" class="text-danger"></span>
+                <div class="form-text">Link will expire after this many hours (1-168)</div>
+            </div>
+            
+            <div class="mb-3">
+                <label asp-for="MaxDownloads" class="form-label">Download Limit</label>
+                <input asp-for="MaxDownloads" class="form-control" type="number" min="1" max="1000" value="5">
+                <span asp-validation-for="MaxDownloads" class="text-danger"></span>
+                <div class="form-text">Maximum number of downloads allowed (1-1000)</div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Upload File</button>
+            <a asp-controller="Admin" asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,69 @@
+﻿@model List<FileShare.Models.FileModel>
+@{
+    ViewData["Title"] = "File Share Admin";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Active Files</h2>
+    <a asp-controller="Admin" asp-action="Upload" class="btn btn-primary">Upload New File</a>
+</div>
+
+@if (Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Size</th>
+                    <th>Uploaded</th>
+                    <th>Expires</th>
+                    <th>Downloads</th>
+                    <th>Download Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var file in Model)
+                {
+                    <tr>
+                        <td>@file.OriginalName</td>
+                        <td>@file.FileSizeFormatted</td>
+                        <td>@file.UploadDate.ToString("MM/dd HH:mm")</td>
+                        <td>
+                            <span class="badge @(file.ExpiresAt <= DateTime.UtcNow ? "bg-danger" : "bg-success")">
+                                @file.TimeRemaining
+                            </span>
+                        </td>
+                        <td>
+                            <span class="badge @(file.CurrentDownloads >= file.MaxDownloads ? "bg-danger" : "bg-info")">
+                                @file.CurrentDownloads / @file.MaxDownloads
+                            </span>
+                        </td>
+                        <td>
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control" value="https://share.woofi7.com@(file.DownloadUrl)" readonly onclick="this.select()">
+                                <button class="btn btn-outline-secondary" onclick="copyToClipboard('https://share.woofi7.com@(file.DownloadUrl)', @file.Id)">Copy</button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-info">
+        <h4>No active files</h4>
+        <p>Upload your first file to get started.</p>
+    </div>
+}
+
+<script>
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        // Could add a toast notification here
+        console.log('Copied to clipboard');
+    });
+}
+</script>
