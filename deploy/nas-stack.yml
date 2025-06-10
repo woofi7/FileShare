@@ -1,0 +1,25 @@
+﻿version: '3.8'
+
+services:
+  fileshare:
+    image: nsignori/fileshare:latest
+    container_name: fileshare
+    ports:
+      - "4242:8080"
+    volumes:
+      - /mnt/user/appdata/fileshare:/database
+      - /mnt/user/data/fileshare/uploads:/uploads
+    environment:
+      - FileShare__MaxFileSizeMB=500
+      - FileShare__DefaultExpirationHours=1
+      - FileShare__DefaultDownloadLimit=5
+      - FileShare__CleanupIntervalHours=6
+      - FileShare__AdminNetworks__0=10.0.1.0/24
+      - FileShare__AdminNetworks__1=127.0.0.1/32
+    restart: unless-stopped
+    networks:
+      - fileshare-network
+
+networks:
+  fileshare-network:
+    driver: bridge
